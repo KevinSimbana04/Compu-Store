@@ -59,5 +59,4 @@ window.addEventListener('storage', (e) => {
 // Inicializar
 document.addEventListener("DOMContentLoaded", () => {
     mostrarVentas();
-    // cargarProductosSelect(); // si tienes formulario manual de ventas
 });

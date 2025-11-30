@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/ventas.css">
     <link rel="stylesheet" href="/css/cabezera.css">
-    <script src="/javaScript/menu.js"></script>
+    <script src="/javaScript/components.js"></script>
     <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+    <!--Alertas-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -21,9 +24,10 @@
         includeComponent("#container-h", "/components/cabezera.html")
     </script>
 
+    <script src="/javaScript/menu-header.js"></script>
+
 
     <section id="ventas" class="seccion">
-        <!-- Tabla de ventas -->
         <h2>Listado de Ventas</h2>
         <table id="tablaVentas">
             <thead>
@@ -40,7 +44,6 @@
             <tbody></tbody>
         </table>
 
-        <!-- Total de ingresos -->
         <p>Total de Ingresos: $<span id="totalIngresos">0</span></p>
     </section>
 

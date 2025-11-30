@@ -144,3 +144,29 @@ tbody tr:hover {
     height: 50px;
     object-fit: cover;
 }
+
+/* ===========================
+    RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    /* Eliminar el margen fijo y permitir ancho completo para las secciones */
+    .product-container,
+    .table-product {
+        margin-left: 0; 
+        max-width: 100%;
+    }
+
+    /* Ocultar la tabla y permitir desplazamiento horizontal */
+    .table-product table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Evita que el contenido de la tabla se rompa */
+    }
+    
+    /* Asegurar que los inputs y selects ocupen todo el espacio disponible */
+    .input-a input,
+    .input-a select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

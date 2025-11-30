@@ -13,6 +13,9 @@
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    
+    /* Añadir transición para el efecto de deslizamiento */
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* --- LOGO --- */
@@ -69,11 +72,10 @@ nav a:hover {
 ========================= */
 @media (max-width: 768px) {
     .menu-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200px;         /* Puede ser más ancho para deslizar */
-        height: 100vh;
+        width: 200px;
+        /* El menú inicia debajo de la cabecera móvil (60px) */
+        top: 60px; 
+        height: calc(100vh - 60px); /* Altura restante de la vista */
         transform: translateX(-100%); /* Oculto por defecto */
         z-index: 2000;
     }
@@ -81,10 +83,24 @@ nav a:hover {
     .menu-container.active {
         transform: translateX(0);  /* Visible cuando se active */
     }
-
-    /* Para el body cuando el menú está abierto, opcional */
-    body.menu-open {
-        overflow: hidden; /* Evita scroll detrás del menú */
+    
+    /* Nueva superposición para contenido */
+    .menu-overlay {
+        position: fixed;
+        top: 60px; /* Inicia debajo de la cabecera */
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 
     /* Logo más pequeño en móvil */
@@ -97,4 +113,3 @@ nav a:hover {
         padding: 12px 0;
     }
 }
-

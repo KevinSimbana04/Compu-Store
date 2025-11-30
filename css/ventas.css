@@ -84,3 +84,26 @@ button:hover {
 }
 
 
+/* ===========================
+    RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    /* Eliminar el margen fijo y permitir ancho completo para la sección */
+    .seccion {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    /* Ocultar la tabla y permitir desplazamiento horizontal */
+    #tablaVentas {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Ajustar padding para que la tabla sea menos ancha verticalmente en móvil */
+    #tablaVentas tbody td {
+        padding: 10px 15px;
+    }
+}
+

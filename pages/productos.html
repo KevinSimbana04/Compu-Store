@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/productos.css">
     <link rel="stylesheet" href="/css/cabezera.css">
-    <script src="/javaScript/menu.js"></script>
+    <script src="/javaScript/components.js"></script>
     <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+    <!--Alertas-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header id="container-h"></header>
@@ -19,6 +22,8 @@
         includeComponent("#menu", "/components/menu.html");
         includeComponent("#container-h", "/components/cabezera.html")
     </script>
+
+    <script src="/javaScript/menu-header.js"></script>
 
 <section class="product-container">
     <h2>Registrar Producto</h2>
@@ -38,10 +43,10 @@
         <div class="input-a">
             <label>Categoría:</label>
             <select id="categoriaProducto">
-                <option value="Computadoras">Computadoras</option>
-                <option value="Accesorios">Accesorios</option>
-                <option value="Componentes">Componentes</option>
-                <option value="Periféricos">Periféricos</option>
+                <option value="Computadoras">Computador</option>
+                <option value="Accesorios">Accesorio</option>
+                <option value="Componentes">Componente</option>
+                <option value="Laptop">Laptop</option>
             </select>
         </div>
 
@@ -76,8 +81,7 @@
         </thead>
 
         <tbody id="productTable">
-            <!-- Aquí se insertan los productos -->
-        </tbody>
+            </tbody>
     </table>
 </section>
 

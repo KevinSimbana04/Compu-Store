@@ -19,6 +19,7 @@ header{
     padding-right: 20px;
     position: sticky;
     top: 0;
+    z-index: 101;
 }
 
 .logo a{
@@ -56,6 +57,7 @@ nav{
     background-color: white;
     height: 62px;
     position: fixed;
+    z-index: 100;
 }
 
 nav ul {

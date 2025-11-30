@@ -3,19 +3,31 @@
 =========================================== */
 .header-container {
     display: flex;
-    justify-content: space-between; /* Separa título y usuario */
+    justify-content: space-between; 
     align-items: center;
     background-color: black;
     color: white;
     height: 100px;
     box-sizing: border-box;
-    padding: 0 20px; /* Espaciado interno */
-    position: fixed;  /* Fijo arriba */
+    padding: 0 20px; 
+    position: fixed;  
     top: 0;
     left: 0;
-    width: calc(100% - 140px); /* Ajusta según el ancho del sidebar */
-    margin-left: 140px;         /* Para no tapar el sidebar */
+    width: calc(100% - 180px); 
+    margin-left: 180px;         
     z-index: 1000;
+}
+
+/* botón de hamburguesa  */
+.menu-toggle {
+    display: none; 
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    order: -1;
 }
 
 .header-title {
@@ -47,9 +59,9 @@ button:hover {
     background-color: #2563eb;
 }
 
-/* Evitar que el contenido quede debajo del header */
+
 body {
-    padding-top: 100px; /* Igual a la altura del header */
+    padding-top: 100px; 
 }
 
 
@@ -57,32 +69,39 @@ body {
     RESPONSIVE
 =========================================== */
 @media (max-width: 768px) {
+
     .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px 15px;
+        flex-direction: row; 
+        justify-content: flex-start;
+        height: 60px; 
+        padding: 0 15px;
         width: 100%;
-        margin-left: 0; /* Oculta el margen lateral en móvil */
+        margin-left: 0; 
+        position: fixed;
+    }
+    
+    /* Mostrar botón de hamburguesa */
+    .menu-toggle {
+        display: block; 
+        margin-right: 15px;
     }
 
     .header-title {
         font-size: 25px;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
-
+    
     .user-a {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
+        margin-left: auto;
+        gap: 15px;
     }
-
+    
     .user-a img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
-
+    
     body {
-        padding-top: 120px; /* Ajusta si el header aumenta de altura */
+        padding-top: 60px;
     }
 }
