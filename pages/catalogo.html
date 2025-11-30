@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPU-STORE || Catálogo</title>
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2><a href=""><strong>COMPU-STORE</strong></a></h2>
+        </div>
+        <div class="buscar">
+            <input type="search" name="buscarProductos" id="" placeholder="Buscar productos...">
+        </div>
+        <div class="img-logo">
+            <a href="#idLogin"><img src="/IMAGENES/login-icono.png" alt="" ></a>
+            <a href=""><img src="/IMAGENES/carrito-logo.png" alt="" ></a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <img src="/IMAGENES/home-icono.png" width="35px" height="35px;">
+            <li><a href="/index.html">Inicio</a></li>
+            <img src="/IMAGENES/productos-icon.png" width="35px" height="35px;">
+            <li><a href="/pages/catalogo.html">Productos</a></li>
+            <img src="/IMAGENES/nosotros-icono.png" width="32px" height="30px">
+            <li><a href="#idNosotros">Nosotros</a></li>
+            <img src="/IMAGENES/contacto-icono.png" width="35px" height="35px;">
+            <li><a href="#idContacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="catalogo" class="productos-container">
+        <!-- Aquí se cargarán los productos -->
+    </section>
+
+    <!-- Modal para registrar venta -->
+    <div id="modalVenta" class="modal" >
+        <div class="modal-content">
+            <span id="cerrarModal" style="cursor:pointer;">&times;</span>
+            <h2>Registrar Compra</h2>
+            <p id="nombreProductoModal"></p>
+            <p>Precio: $<span id="precioProductoModal"></span></p>
+            <label for="cantidadCompra">Cantidad:</label>
+            <input type="number" id="cantidadCompra" min="1" value="1">
+            <button id="btnRegistrarVenta">Comprar</button>
+        </div>
+    </div>
+
+    <script src="/javaScript/catalogo.js"></script>
+
+        <footer class="footer">
+        <div class="siguenos">
+            <span><b>Síguenos en redes</b></span><br>
+            <img src="img/redes.png" alt="">
+        </div>
+        <div class="enlaces">
+            <span><b>Enlaces de interés</b></span>
+            <ul>
+                <li>Soporte técnico</li>
+                <li>Blog de noticias</li>
+                <li>Preguntas frecuentes (FAQ)</li>
+            </ul>
+        </div>
+        <div class="llamanos">
+            <span><b>Llámanos</b></span>
+            <p>(593) 995644186</p>
+            <span><b>Escríbenos</b></span>
+            <p>Compu-Store2025@gmail.com</p>
+        </div>
+
+        <div class="derechos-a">
+            Derechos Reservados - Compu-Store
+        </div>
+    </footer>
+</body>
+</html>

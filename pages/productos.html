@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPU-STORE || Productos</title>
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="/css/cabezera.css">
+    <script src="/javaScript/menu.js"></script>
+    <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+</head>
+<body>
+    <header id="container-h"></header>
+
+
+    <aside id="menu"></aside>
+
+    <script>
+        includeComponent("#menu", "/components/menu.html");
+        includeComponent("#container-h", "/components/cabezera.html")
+    </script>
+
+<section class="product-container">
+    <h2>Registrar Producto</h2>
+
+    <form  id="productForm">
+
+        <div class="input-a">
+            <label>Nombre del producto:</label>
+            <input type="text" id="nombreProducto" required>
+        </div>
+
+        <div class="input-a">
+            <label>Precio ($):</label>
+            <input type="number" id="precioProducto" step="0.01" required>
+        </div>
+
+        <div class="input-a">
+            <label>Categoría:</label>
+            <select id="categoriaProducto">
+                <option value="Computadoras">Computadoras</option>
+                <option value="Accesorios">Accesorios</option>
+                <option value="Componentes">Componentes</option>
+                <option value="Periféricos">Periféricos</option>
+            </select>
+        </div>
+
+        <div class="input-a">
+            <label>Cantidad en stock:</label>
+            <input type="number" id="stockProducto" required>
+        </div>
+
+        <div class="input-a">
+            <label>Imagen (URL):</label>
+            <input type="text" id="imagenProducto" placeholder="https://">
+        </div>
+
+        <button type="submit" class="btn add">Agregar Producto</button>
+    </form>
+</section>
+
+<section class="table-product">
+    <h2>Listado de Productos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="productTable">
+            <!-- Aquí se insertan los productos -->
+        </tbody>
+    </table>
+</section>
+
+
+    <script src="/javaScript/productos.js"></script>
+</body>
+</html>

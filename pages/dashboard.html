@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPU-STORE || Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/cabezera.css">
+    <script src="/javaScript/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <header id="container-h"></header>
+
+
+    <aside id="menu"></aside>
+
+    <script>
+        includeComponent("#menu", "/components/menu.html");
+        includeComponent("#container-h", "/components/cabezera.html")
+    </script>
+
+
+        <!-- Dashboar -->
+        <main class="dashboard">
+
+            <div class="Estados">
+                <div class="card">
+                    <h3>Total Ventas</h3>
+                    <p id="totalVentas">$0</p>
+                    <img src="/IMAGENES/ventas.png" alt="">
+                </div>
+                <div class="card">
+                    <h3>Nuevos Usuarios</h3>
+                    <p id="totalUsuarios">0</p>
+                    <img src="/IMAGENES/aprobar.png" alt="">
+                </div>
+                <div class="card">
+                    <h3>Ingresos Promedio</h3>
+                    <p id="promedioVentas"></p>
+                    <img src="/IMAGENES/costo.png" alt="">
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts">
+                <div class="chart-card">
+                    <h3>Ventas</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Productos Vendidos</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+            </div>
+
+            </div>
+
+    <script src="/javaScript/prueba.js"></script>
+</body>
+</html>

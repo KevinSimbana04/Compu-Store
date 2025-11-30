@@ -1,0 +1,100 @@
+/* --- CONTENEDOR LATERAL --- */
+.menu-container {
+    width: 180px;
+    height: 100vh;
+    background: black;
+    padding-top: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* --- LOGO --- */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 8px;
+}
+
+.logo-container img {
+    width: 80px;
+    height: auto;
+}
+
+/* --- NAV --- */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ítems del menú */
+nav li {
+    width: 100%;
+}
+
+/* Enlaces */
+nav a {
+    display: block;          /* para que el hover abarque todo */
+    padding: 15px 0;
+    text-align: center;
+
+    color: white;            /* Quita el azul */
+    text-decoration: none;   /* Quita subrayado */
+    font-size: 16px;
+
+    transition: background .2s ease;
+}
+
+/* Hover */
+nav a:hover {
+    background: #a1a1a1;
+    color: black;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;         /* Puede ser más ancho para deslizar */
+        height: 100vh;
+        transform: translateX(-100%); /* Oculto por defecto */
+        z-index: 2000;
+    }
+
+    .menu-container.active {
+        transform: translateX(0);  /* Visible cuando se active */
+    }
+
+    /* Para el body cuando el menú está abierto, opcional */
+    body.menu-open {
+        overflow: hidden; /* Evita scroll detrás del menú */
+    }
+
+    /* Logo más pequeño en móvil */
+    .logo-container img {
+        width: 60px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+}
+
