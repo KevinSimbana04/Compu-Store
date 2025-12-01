@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Si el usuario confirma, redirigir a la página de inicio o login
-                        window.location.href = "/index.html";
+                        window.location.href = "/inicio.html";
                     } else {
                         // Mensaje si cancela
                         Swal.fire('Cancelado', 'Sesión no cerrada.', 'info');

@@ -149,7 +149,6 @@ tbody tr:hover {
     RESPONSIVE
 =========================== */
 @media (max-width: 768px) {
-    /* Eliminar el margen fijo y permitir ancho completo para las secciones */
     .product-container,
     .table-product {
         margin-left: 0; 

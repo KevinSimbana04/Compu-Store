@@ -5,12 +5,12 @@ if (totalUsuariosElement) {
     totalUsuariosElement.textContent = usuarios.length;
 }
 
-// ====== KPI Total Ventas ======
+// ======  Total Ventas ======
 let ventas = JSON.parse(localStorage.getItem("ventas")) || [];
 const totalVentas = ventas.reduce((acc, v) => acc + parseFloat(v.total), 0);
 document.getElementById("totalVentas").textContent = `$${totalVentas.toFixed(2)}`;
 
-// ====== KPI Promedio de Ventas ======
+// ====== Promedio de Ventas ======
 const promedioVentas = ventas.length ? totalVentas / ventas.length : 0;
 document.getElementById("promedioVentas").textContent = `$${promedioVentas.toFixed(2)}`;
 

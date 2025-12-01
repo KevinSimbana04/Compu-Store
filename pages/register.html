@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="/javaScript/registro.js" defer></script>
+</head>
+<body>
+
+<!-- TARJETA DE LOGIN -->
+<div class="casaIndex">
+    <a href="/inicio.html"><img src="/IMAGENES/home-icono.png" alt="casa" width="50px" height="50px"></a>
+</div>
+<div class="login-container" id="loginCard">
+    <div class="logo">
+        <div class="logo-circle"><img src="/IMAGENES/logo2.ico" alt="logo" width="80px" height="80px"></div>
+    </div>
+    <h2>Bienvenido COMPU-STORE</h2>
+    <p class="subtitle">Ingresa a tu cuenta</p>
+
+    <form id="formLogin">
+        <div class="items">
+            <input type="text" id="logUsuario" placeholder="Usuario" required>
+            <i>👨‍💻</i>
+        </div>
+
+        <div class="items">
+            <input type="password" id="logContraseña" placeholder="Contraseña" required>
+            <i>🔒</i>
+            <span class="verContra" onclick="verPassword('logContraseña')">👁️</span>
+        </div>
+
+        <div class="olvidarContra">
+            <a href="#" onclick="alert('Funcionalidad de recuperación próximamente'); return false;">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+
+    <div class="opciones">
+        <span>o continúa con</span>
+    </div>
+
+    <div class="social-login">
+        <button class="sesiones google" onclick="alert('Login con Google')">
+            <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20">
+        </button>
+        <button class="sesiones facebook" onclick="alert('Login con Facebook')">
+            <img src="https://www.facebook.com/favicon.ico" alt="Facebook" width="20" height="20">
+        </button>
+        <button class="sesiones apple" onclick="alert('Login con Apple')">
+            <img src="https://www.apple.com/favicon.ico" alt="Apple" width="20" height="20">
+        </button>
+    </div>
+
+    <div class="registroLink">
+        ¿No tienes cuenta? <a onclick="mostrarRegistro()">Regístrate aquí</a>
+    </div>
+</div>
+
+<!-- TARJETA DE REGISTRO -->
+<div class="login-container oculto" id="registroCard">
+    <div class="logo">
+        <div class="logo-circle"><img src="/IMAGENES/logo2.ico" alt="logo" width="80px" height="80px"></div>
+    </div>
+    <h2>Crear Cuenta COMPU-STORE</h2>
+    <p class="subtitle">Únete a nuestra comunidad</p>
+
+    <form id="formRegistro">
+        <div class="fila-items">
+            <div class="items">
+                <input type="text" id="regNombre" placeholder="Nombre" required>
+                <i>👤</i>
+            </div>
+            <div class="items">
+                <input type="text" id="regApellido" placeholder="Apellido" required>
+                <i>👤</i>
+            </div>
+        </div>
+
+        <div class="items">
+            <input type="text" id="regCedula" placeholder="Cédula" required>
+            <i>🆔</i>
+        </div>
+
+        <div class="items">
+            <input type="date" id="regFechaNac" placeholder="Fecha de Nacimiento" required>
+            <i>📅</i>
+        </div>
+
+        <div class="items">
+            <input type="email" id="regCorreo" placeholder="Correo electrónico" required>
+            <i>📧</i>
+            <div class="mensaje-error" id="errorCorreo">Ingresa un correo válido</div>
+        </div>
+
+        <div class="items">
+            <input type="text" id="regDireccion" placeholder="Dirección" required>
+            <i>🏠</i>
+        </div>
+
+        <div class="items">
+            <input type="text" id="regUsuario" placeholder="Usuario" required>
+            <i>👨‍💻</i>
+        </div>
+
+        <div class="items">
+            <input type="password" id="regContraseña" placeholder="Contraseña" required>
+            <i>🔒</i>
+            <span class="verContra" onclick="verPassword('regContraseña')">👁️</span>
+        </div>
+
+        <div class="terminos">
+            <input type="checkbox" id="aceptarTerminos" required>
+            <label for="aceptarTerminos">Acepto los <a href="#" onclick="alert('Términos y condiciones'); return false;">términos y condiciones</a></label>
+        </div>
+
+        <button type="submit" class="login-button">Crear Cuenta</button>
+    </form>
+
+    <div class="opciones">
+        <span>o regístrate con</span>
+    </div>
+
+    <div class="social-login">
+        <button class="sesiones google" onclick="alert('Registro con Google')">
+            <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20">
+        </button>
+        <button class="sesiones facebook" onclick="alert('Registro con Facebook')">
+            <img src="https://www.facebook.com/favicon.ico" alt="Facebook" width="20" height="20">
+        </button>
+        <button class="sesiones apple" onclick="alert('Registro con Apple')">
+            <img src="https://www.apple.com/favicon.ico" alt="Apple" width="20" height="20">
+        </button>
+    </div>
+
+    <div class="registroLink">
+        ¿Ya tienes cuenta? <a onclick="mostrarLogin()">Inicia sesión</a>
+    </div>
+</div>
+
+</body>
+</html>

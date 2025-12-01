@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPU-STORE || Catálogo</title>
-    <link rel="stylesheet" href="/css/catalogo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/estilos.css">
-    <link rel="shortcut icon" href="/IMAGENES/logo2.ico" type="image/x-icon">
+    <title>Nosotros - COMPU-STORE</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -38,25 +38,49 @@
     </nav>
 
 
-    <section id="catalogo" class="productos-container">
-        <!-- Aquí se cargarán los productos -->
+
+
+    <!-- CONTENIDO -->
+    <section class="nosotros">
+
+        <div class="nosotros-container">
+
+            <!-- IMAGEN -->
+            <div class="img-nosotros">
+                <img src="/IMAGENES/logo.jpg">
+            </div>
+
+            <!-- TEXTO PRINCIPAL -->
+            <div class="texto-nosotros">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Ser el destino tecnológico de confianza que equipa a nuestros clientes con las últimas y
+                    mejores soluciones en portátiles, CPUs, consolas de videojuegos y accesorios esenciales.
+                    Nuestro compromiso es facilitar el acceso a la innovación, garantizando una experiencia de
+                    compra informada y satisfactoria que potencie el trabajo, el entretenimiento
+                    y la conexión en un mundo en constante evolución.</p>
+            </div>
+        </div>
+
+        <!-- MISIÓN Y VISIÓN -->
+        <div class="misionvision">
+            <h3>Misión</h3>
+            <p>Ser el destino tecnológico de confianza que equipa a nuestros clientes con las últimas y mejores
+                soluciones en portátiles, CPUs, consolas de videojuegos y accesorios esenciales. Nuestro compromiso es
+                facilitar el acceso a la innovación, garantizando una experiencia de compra informada y satisfactoria
+                que potencie el trabajo, el entretenimiento y la conexión en un mundo en constante evolución.</p>
+
+            <h3>Visión</h3>
+            <p>Ser reconocidos como el principal hub tecnológico y referente de innovación en el mercado. Buscamos
+                establecer una relación duradera con cada cliente, anticipándonos a sus necesidades y convirtiéndonos en
+                el socio indispensable que impulsa su productividad y pasión digital, avanzando juntos a la velocidad de
+                la luz.</p>
+        </div>
     </section>
 
-    <!-- Modal para registrar venta -->
-    <div id="modalVenta" class="modal" >
-        <div class="modal-content">
-            <span id="cerrarModal" style="cursor:pointer;">&times;</span>
-            <h2>Registrar Compra</h2>
-            <p id="nombreProductoModal"></p>
-            <p>Precio: $<span id="precioProductoModal"></span></p>
-            <label for="cantidadCompra">Cantidad:</label>
-            <input type="number" id="cantidadCompra" min="1" value="1">
-            <button id="btnRegistrarVenta">Comprar</button>
-        </div>
-    </div>
 
-    <script src="/javaScript/productos-iniciales.js"></script>
-    <script src="/javaScript/catalogo.js"></script>
+
+
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -91,4 +115,5 @@
 
     </footer>
 </body>
+
 </html>

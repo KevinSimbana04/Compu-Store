@@ -50,12 +50,12 @@ nav li {
 
 /* Enlaces */
 nav a {
-    display: block;          /* para que el hover abarque todo */
+    display: block;          
     padding: 15px 0;
     text-align: center;
 
-    color: white;            /* Quita el azul */
-    text-decoration: none;   /* Quita subrayado */
+    color: white;            
+    text-decoration: none;   
     font-size: 16px;
 
     transition: background .2s ease;
@@ -73,21 +73,21 @@ nav a:hover {
 @media (max-width: 768px) {
     .menu-container {
         width: 200px;
-        /* El menú inicia debajo de la cabecera móvil (60px) */
+
         top: 60px; 
-        height: calc(100vh - 60px); /* Altura restante de la vista */
-        transform: translateX(-100%); /* Oculto por defecto */
+        height: calc(100vh - 60px); 
+        transform: translateX(-100%); 
         z-index: 2000;
     }
 
     .menu-container.active {
-        transform: translateX(0);  /* Visible cuando se active */
+        transform: translateX(0);  
     }
     
-    /* Nueva superposición para contenido */
+    
     .menu-overlay {
         position: fixed;
-        top: 60px; /* Inicia debajo de la cabecera */
+        top: 60px; 
         left: 0;
         width: 100vw;
         height: calc(100vh - 60px);
@@ -103,7 +103,6 @@ nav a:hover {
         visibility: visible;
     }
 
-    /* Logo más pequeño en móvil */
     .logo-container img {
         width: 60px;
     }

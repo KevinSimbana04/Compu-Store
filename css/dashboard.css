@@ -80,22 +80,21 @@ body{
     RESPONSIVE
 =========================================== */
 @media (max-width: 768px) {
-    /* Eliminar el margen izquierdo que compensa la barra lateral */
     body {
         margin-left: 0;
     }
 
-    /* Apilar tarjetas y gráficos */
+
     .estados,
     .charts {
         flex-direction: column;
     }
 
-    /* Asegurar que las tarjetas tomen el ancho completo */
+
     .card {
         flex: none;
         width: 100%;
-        box-sizing: border-box; /* Incluir padding/border en el ancho total */
+        box-sizing: border-box; 
         margin-bottom: 10px;
     }
     
